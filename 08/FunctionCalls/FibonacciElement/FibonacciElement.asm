@@ -17,6 +17,7 @@
 	A=M
 	M=D
 	@3000
+	D=A
 	@ARG
 	A=M+1
 	M=D
