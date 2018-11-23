@@ -68,7 +68,7 @@ class Screen {
 		return;
     }
 
-    /** Draws the (x,y) pixel, using the current color. */
+    /** Desenha um (x,y) pixel, using the current color. */
     function void drawPixel(int x, int y) {
 		var int address;
 		var int pixel;
@@ -84,7 +84,7 @@ class Screen {
 		return;
     }
 
-    /** Draws a line from pixel (x1,y1) to pixel (x2,y2), using the current color. */
+    /** Desenha uma linha from pixel (x1,y1) to pixel (x2,y2),*/
     function void drawLine(int x1, int y1, int x2, int y2) {
 		var int dx, dy;
 		var int diff, dir_x, dir_y;
@@ -99,7 +99,7 @@ class Screen {
 			let _color = -1;
 		}
 		
-		let dx = Math.abs(x2 - x1);
+		let dx = Math.abs(x2 - x1); //
 		let dy = Math.abs(y2 - y1);
 		
 		if((dx=0) & (dy=0)){
