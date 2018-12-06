@@ -1,0 +1,338 @@
+function TicTacToeGame.drawBolinha 1
+push argument 0
+pop local 0
+push local 0
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 170
+push constant 65
+push constant 15
+call Screen.drawCircle 3
+pop temp 0
+label IF_FALSE0
+push local 0
+push constant 2
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 250
+push constant 65
+push constant 15
+call Screen.drawCircle 3
+pop temp 0
+label IF_FALSE1
+push local 0
+push constant 3
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 325
+push constant 65
+push constant 15
+call Screen.drawCircle 3
+pop temp 0
+label IF_FALSE2
+push local 0
+push constant 4
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 170
+push constant 140
+push constant 15
+call Screen.drawCircle 3
+pop temp 0
+label IF_FALSE3
+push local 0
+push constant 5
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 250
+push constant 140
+push constant 15
+call Screen.drawCircle 3
+pop temp 0
+label IF_FALSE4
+push local 0
+push constant 6
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 325
+push constant 140
+push constant 15
+call Screen.drawCircle 3
+pop temp 0
+label IF_FALSE5
+push local 0
+push constant 7
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 170
+push constant 215
+push constant 15
+call Screen.drawCircle 3
+pop temp 0
+label IF_FALSE6
+push local 0
+push constant 8
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 250
+push constant 215
+push constant 15
+call Screen.drawCircle 3
+pop temp 0
+label IF_FALSE7
+push local 0
+push constant 9
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 325
+push constant 215
+push constant 15
+call Screen.drawCircle 3
+pop temp 0
+label IF_FALSE8
+push constant 0
+return
+function TicTacToeGame.drawX 1
+push argument 0
+pop local 0
+push local 0
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 180
+push constant 63
+push constant 165
+push constant 80
+call Screen.drawLine 4
+pop temp 0
+push constant 180
+push constant 80
+push constant 165
+push constant 63
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE0
+push local 0
+push constant 2
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 255
+push constant 63
+push constant 240
+push constant 80
+call Screen.drawLine 4
+pop temp 0
+push constant 255
+push constant 80
+push constant 240
+push constant 63
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE1
+push local 0
+push constant 3
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 330
+push constant 63
+push constant 315
+push constant 80
+call Screen.drawLine 4
+pop temp 0
+push constant 330
+push constant 80
+push constant 315
+push constant 63
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE2
+push local 0
+push constant 4
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 180
+push constant 125
+push constant 165
+push constant 142
+call Screen.drawLine 4
+pop temp 0
+push constant 180
+push constant 142
+push constant 165
+push constant 125
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE3
+push local 0
+push constant 5
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 255
+push constant 125
+push constant 240
+push constant 142
+call Screen.drawLine 4
+pop temp 0
+push constant 255
+push constant 142
+push constant 240
+push constant 125
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE4
+push local 0
+push constant 6
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 330
+push constant 125
+push constant 315
+push constant 142
+call Screen.drawLine 4
+pop temp 0
+push constant 330
+push constant 142
+push constant 315
+push constant 125
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE5
+push local 0
+push constant 7
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 180
+push constant 205
+push constant 165
+push constant 220
+call Screen.drawLine 4
+pop temp 0
+push constant 180
+push constant 220
+push constant 165
+push constant 205
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE6
+push local 0
+push constant 8
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 255
+push constant 205
+push constant 240
+push constant 220
+call Screen.drawLine 4
+pop temp 0
+push constant 255
+push constant 220
+push constant 240
+push constant 205
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE7
+push local 0
+push constant 9
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 330
+push constant 205
+push constant 315
+push constant 220
+call Screen.drawLine 4
+pop temp 0
+push constant 330
+push constant 220
+push constant 315
+push constant 205
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE8
+push constant 0
+return
+function TicTacToeGame.drawCircle 3
+push constant 181
+push argument 2
+call Math.min 2
+pop argument 2
+push argument 2
+neg
+pop local 2
+label WHILE_EXP0
+push local 2
+push argument 2
+gt
+not
+not
+if-goto WHILE_END0
+push argument 2
+push argument 2
+call Math.multiply 2
+push local 2
+push local 2
+call Math.multiply 2
+sub
+call Math.sqrt 1
+pop local 1
+push argument 1
+push local 2
+add
+push constant 0
+push constant 255
+call Math.constrain 3
+pop local 0
+push argument 0
+push local 1
+add
+push local 0
+push argument 0
+push local 1
+sub
+push local 0
+call Screen.drawLine 4
+pop temp 0
+push local 2
+push constant 1
+add
+pop local 2
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return

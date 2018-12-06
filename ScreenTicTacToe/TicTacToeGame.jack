@@ -1,0 +1,98 @@
+class TicTacToeGame{
+
+	function void drawBolinha(int n){
+		var int current_n;
+		let current_n = n;
+
+		if(current_n =1){
+			do Screen.drawCircle(170,65,15); 
+		}
+		if(current_n=2){
+			do Screen.drawCircle(250,65,15); 
+		}
+		if(current_n=3){
+			do Screen.drawCircle(325,65,15); 
+		}
+
+		if(current_n=4){
+			do Screen.drawCircle(170,140,15); 
+		}
+		if(current_n=5){
+			do Screen.drawCircle(250,140,15); 
+		}
+		if(current_n=6){
+			do Screen.drawCircle(325,140,15); 
+		}
+
+		if(current_n=7){
+			do Screen.drawCircle(170,215,15); 
+		}
+		if(current_n=8){
+			do Screen.drawCircle(250,215,15); 
+		}
+		if(current_n=9){
+			do Screen.drawCircle(325,215,15); 
+		}
+	return;
+	}
+
+	function void drawX(int n){
+		var int current_n;
+		let current_n = n;
+
+		if(current_n = 1){
+			do Screen.drawLine(180, 63 ,165 ,80 );
+        	do Screen.drawLine(180, 80, 165, 63);
+		}
+		if(current_n = 2){
+			do Screen.drawLine(255, 63 , 240,80 );
+        	do Screen.drawLine(255, 80, 240, 63);
+		}
+		if(current_n = 3){
+			do Screen.drawLine(330, 63 ,315 ,80 );
+        	do Screen.drawLine(330, 80, 315, 63);
+		}
+		if(current_n = 4){
+			do Screen.drawLine(180, 125, 165, 142 );
+        	do Screen.drawLine(180, 142, 165, 125);
+		}
+		if(current_n = 5){
+			do Screen.drawLine(255, 125, 240, 142 );
+        	do Screen.drawLine(255, 142, 240, 125);
+		}
+		if(current_n = 6){
+			do Screen.drawLine(330, 125 ,315,142 ); 
+        	do Screen.drawLine(330, 142, 315, 125);
+		}
+		if(current_n = 7){
+			do Screen.drawLine(180, 205,165 , 220); 
+        	do Screen.drawLine(180, 220, 165, 205);
+		}
+		if(current_n = 8){
+			do Screen.drawLine(255, 205, 240, 220);
+        	do Screen.drawLine(255, 220, 240, 205);
+		}
+		if(current_n = 9){
+			do Screen.drawLine(330, 205 ,315,220 );
+        	do Screen.drawLine(330, 220, 315, 205);
+		}
+	return;
+	}
+    function void drawCircle(int x, int y, int r) {
+		var int current_y, dx, dy;
+	
+		let r = Math.min(181, r);
+		
+		let dy = -r;
+		while(~(dy > r)){
+			let dx = Math.sqrt((r*r) - (dy*dy));
+			let current_y = Math.constrain(y + dy, 0, 255); // constrain within screen limits
+			
+			do Screen.drawLine(x+dx, current_y, x-dx, current_y);
+			
+			let dy = dy + 1;
+		}
+		
+		return;
+    }
+}

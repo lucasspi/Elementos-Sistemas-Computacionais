@@ -1,0 +1,135 @@
+class TicTacToe{
+    field boolean gOver;
+    constructor TicTacToe new(){
+        let gOver = false;
+        return this;
+    }
+    method void gameOver(){
+		do Output.moveCursor(12, 25);
+		do Output.printString("GAME OVER");
+		do Output.println();
+		
+		return;
+	}
+    method void jogar(){
+		var char key;
+		var boolean exit;
+        var bool jogador;
+		
+		let exit = false;
+        let jogador = false;
+
+		do Output.printString("SPACEBAR");
+		while(~(key = 32)){
+			let key = Keyboard.keyPressed();		
+		}
+		
+        while(~exit){
+		
+			while((key = 0) & (~exit)){
+				let key = Keyboard.keyPressed();
+				
+				if(gOver){
+					do gameOver();
+					let exit = true;
+				}
+			}
+			
+			if(key = 140){   // ESC
+				let exit = true;
+			}
+			
+			if(key = 49){   // 1
+				
+                if(jogador = true){
+                    do TicTacToeGame.drawBolinha(1);
+                }else{
+                    do TicTacToeGame.drawX(1);
+                }
+                let jogador = ~jogador;
+			}
+			if(key = 50){ //2
+				if(jogador = true){
+                    do TicTacToeGame.drawBolinha(2);
+                }else{
+                    do TicTacToeGame.drawX(2);
+                }
+                let jogador = ~jogador;
+			}
+			
+			if(key = 51){ //3
+				if(jogador = true){
+                    do TicTacToeGame.drawBolinha(3);
+                }else{
+                    do TicTacToeGame.drawX(3);
+                }
+                let jogador = ~jogador;
+			}
+			
+			if(key = 52){   // 4
+				if(jogador = true){
+                    do TicTacToeGame.drawBolinha(4);
+                }else{
+                    do TicTacToeGame.drawX(4);
+                }
+                let jogador = ~jogador;
+			}
+			
+			if(key = 53){   // 5
+				if(jogador = true){
+                    do TicTacToeGame.drawBolinha(5);
+                }else{
+                    do TicTacToeGame.drawX(5);
+                }
+                let jogador = ~jogador;
+			}
+			
+			if(key = 54){   // 6
+				if(jogador = true){
+                    do TicTacToeGame.drawBolinha(6);
+                }else{
+                    do TicTacToeGame.drawX(6);
+                }
+                let jogador = ~jogador;
+			}
+			
+			if(key = 55){   // 7
+				if(jogador = true){
+                    do TicTacToeGame.drawBolinha(7);
+                }else{
+                    do TicTacToeGame.drawX(7);
+                }
+                let jogador = ~jogador;
+			}
+			
+			if(key = 56){   // 8
+				if(jogador = true){
+                    do TicTacToeGame.drawBolinha(8);
+                }else{
+                    do TicTacToeGame.drawX(8);
+                }
+                let jogador = ~jogador;
+			}
+			if(key = 57){   // 9
+				if(jogador = true){
+                    do TicTacToeGame.drawBolinha(9);
+                }else{
+                    do TicTacToeGame.drawX(9);
+                }
+                let jogador = ~jogador;
+			}
+			
+			while (~(key = 0) & (~exit)) {
+				let key = Keyboard.keyPressed();
+				
+				if(gOver){
+					do gameOver();
+					let exit = true;
+				}
+			}
+			
+		}
+		return;
+    }
+	
+}

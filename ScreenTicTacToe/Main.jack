@@ -1,0 +1,23 @@
+class Main {
+    
+    function void main() {
+		
+        
+        var TicTacToe jogo;
+        let jogo = TicTacToe.new();
+    
+        do Screen.drawLine(150,190,350,190);   
+        do Screen.drawLine(150,90,350,90);    
+        do Screen.drawLine(200,40,200,240); 
+        do Screen.drawLine(300,40,300,240);     // tabuleiro
+    
+        
+        
+        do jogo.jogar();
+        
+        return;
+        
+    }
+}
+
+    
