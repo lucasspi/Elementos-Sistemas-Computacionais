@@ -1,5 +1,5 @@
 class TicTacToeGame{
-
+	
 	function void drawBolinha(int n){
 		var int current_n;
 		let current_n = n;
@@ -13,7 +13,6 @@ class TicTacToeGame{
 		if(current_n=3){
 			do Screen.drawCircle(325,65,15); 
 		}
-
 		if(current_n=4){
 			do Screen.drawCircle(170,140,15); 
 		}

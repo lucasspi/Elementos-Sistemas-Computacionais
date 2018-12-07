@@ -92,16 +92,12 @@ class TicTacToe{
 
 		
         while((~exit) & (~(state=9)) ){
-                let indice = indice + 1;
                 
             
                 if(jogador = true){
                     do Output.println();
-                     do Output.moveCursor(1, 24);
+                    do Output.moveCursor(1, 24);
                     do Output.printString("jogador 2");
-                    
-                    
-
                 }else{
                     do Output.println();
                     do Output.moveCursor(1, 24);
@@ -123,10 +119,9 @@ class TicTacToe{
                     
                 }
                 
-                if(key = 49){   // 1
-                
-                        if(um = 0){
-                        
+                if(key = 49){ //1
+
+                    if(um = 0){
                         if(jogador = true){
                             do TicTacToeGame.drawBolinha(1);
                             let contador[0] = 2;
@@ -136,10 +131,10 @@ class TicTacToe{
                         }
                         let jogador = ~jogador;
                         let state = state +1;
-                        }else{
-                        }
-                    
-                    let um = um +1;
+                    }else{
+
+                    }
+                    let um =  1;
                     
                 }
                 if(key = 50){ //2
@@ -208,7 +203,7 @@ class TicTacToe{
                             let contador[4] = 1;
                         }
                         let jogador = ~jogador;
-                        let state = state +1;
+                        let state = state + 1;
                     }else{
                         
                     }
@@ -266,9 +261,7 @@ class TicTacToe{
                     }else{
 
                         }
-                    let oito = oito + 1;
-                    
-                
+                    let oito = 1;
                 }
                 if(key = 57){   // 9
                     if(nove = 0){
@@ -284,88 +277,56 @@ class TicTacToe{
                         }else{
 
                         }
-                    let nove = nove +1;
+                    let nove = 1;
                     
                 
                 }
-                if((contador[0] = contador[1]) & (contador[1] = contador[2]) & (contador[1] > 0)){
+                if((contador[0] = contador[1]) & (contador[2]= contador[1]) & (contador[0] > 0)){
                     do Output.println();
                     do Output.moveCursor(3, 24);
-                    if(contador[0] = 1){
                     do Output.printString("Jogador 1 venceu");
-                    }else{
-                        do Output.printString("Jogador 2 venceu");
-                    }
-                    let state=9;
-                }//primeira linha
-                if((contador[3] = contador[4]) & (contador[4] = contador[5]) & (contador[3] > 0) ){
+                    
+                }//segundaa linha
+                if((contador[3] = contador[4]) & (contador[4]= contador[5]) & (contador[0] > 0)){
                     do Output.println();
                     do Output.moveCursor(3, 24);
-                    if(contador[3] = 1){
                     do Output.printString("Jogador 1 venceu");
-                    }else{
-                        do Output.printString("Jogador 2 venceu");
-                    }
                     let state=9;
                 }//segundaa linha
-                if((contador[6] = contador[7]) & (contador[7] = contador[8]) & (contador[6] > 0)){
+                if((contador[6] = contador[7]) & (contador[7]= contador[8]) &(contador[0] > 0)){
                     do Output.println();
                     do Output.moveCursor(3, 24);
-                    if(contador[6] = 1){
                     do Output.printString("Jogador 1 venceu");
-                    }else{
-                        do Output.printString("Jogador 2 venceu");
-                    }
-                    let state=9;
+                    let state = 9;
                 }//terceira linha
-                if((contador[1] = contador[4]) & (contador[4] = contador[8]) & (contador[4] > 0)){
+                if((contador[1] = contador[4]) & (contador[4] = contador[8]) & (contador[0] > 0)){
                     do Output.println();
                     do Output.moveCursor(3, 24);
-                    if(contador[1] = 1){
                     do Output.printString("Jogador 1 venceu");
-                    }else{
-                        do Output.printString("Jogador 2 venceu");
-                    }
                     let state=9;
                 }//linha diagonal
-                if((contador[2] = contador[4]) & (contador[4] = contador[6]) & (contador[2] > 0)){
+                if((contador[2] = contador[4]) & (contador[4]= contador[6]) & (contador[0] > 0)){
                     do Output.println();
                     do Output.moveCursor(3, 24);
-                    if(contador[2] = 1){
                     do Output.printString("Jogador 1 venceu");
-                    }else{
-                        do Output.printString("Jogador 2 venceu");
-                    }
                     let state=9;
                 }//linha diagonal
                 if((contador[0] = contador[3]) & (contador[3] = contador[6]) & (contador[0] > 0)){
                     do Output.println();
                     do Output.moveCursor(1, 24);
-                    if(contador[0] = 1){
                     do Output.printString("Jogador 1 venceu");
-                    }else{
-                        do Output.printString("Jogador 2 venceu");
-                    }
                     let state=9;
                 }//primeira coluna
-                if((contador[1] = contador[4]) & (contador[4] = contador[7]) & (contador[7] > 0)){
+                if((contador[1] = contador[4]) & (contador[4] = contador[7]) &(contador[0] > 0)){
                     do Output.println();
                     do Output.moveCursor(3, 24);
-                    if(contador[1] = 1){
                     do Output.printString("Jogador 1 venceu");
-                    }else{
-                        do Output.printString("Jogador 2 venceu");
-                    }
                     let state=9;
                 }//segunda coluna
-                if((contador[2] = contador[5]) & (contador[5] = contador[8]) & (contador[8] > 0)){
+                if((contador[2] = contador[5]) & (contador[5]= contador[8]) & (contador[0] > 0)){
                     do Output.println();
                     do Output.moveCursor(3, 24);
-                    if(contador[2] = 1){
                     do Output.printString("Jogador 1 venceu");
-                    }else{
-                        do Output.printString("Jogador 2 venceu");
-                    }
                     let state=9;
                 }//terceiraa coluna
                 
@@ -384,7 +345,7 @@ class TicTacToe{
             do Output.moveCursor(1, 24);
             do Output.printString("O jogo acabou");
             
-        
+            
 		return;
         }
     
